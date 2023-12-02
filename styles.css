@@ -8,7 +8,7 @@
 
 html, body {
     font-family: 'Open Sans', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .hero{
     height: calc(100vh - nav);
