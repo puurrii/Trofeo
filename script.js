@@ -2,13 +2,8 @@ const isMobile = window.innerWidth <= 600;
 
 const vid = document.querySelector('.video');
 
-vid.currentTime = 15;
+vid.currentTime = 20;
 
-if (isMobile) {
-    vid.currentTime = 20;
-
- 
-}
 
 window.addEventListener("load", () => {
 

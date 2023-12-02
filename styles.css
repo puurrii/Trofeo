@@ -135,7 +135,7 @@ li{
 .navbar{
     bottom: 0;
     position: absolute;
-    color: #212121;
+    color: #111111;
     border: 0 solid 212121;
     font-size: 22px;
     height: 8vh;
@@ -153,8 +153,10 @@ nav{
     cursor: pointer;
     height: 8vh;
     width: 80vw;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.082);
+    backdrop-filter: blur(7px);
     align-items: center;
+    color: #111111;
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
@@ -166,7 +168,11 @@ nav > ul {
 nav > ul > li{
     margin:  0 20px ;
 }
-nav > *{margin-bottom: 5px; cursor: pointer;}
+nav > *{
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: #fff;
+}
 nav > ul > li:hover{
     text-decoration:underline ;
 }
