@@ -125,7 +125,7 @@ html, body {
         align-items: center;
     }
     .listitem > li{
-        margin: 0 10px;
+        margin: 0 30px;
     }
 }
 li{
@@ -139,7 +139,7 @@ li{
     border: 0 solid 212121;
     font-size: 22px;
     height: 8vh;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
     width: 100vw;
     font-weight: 600;
     z-index: 3;
