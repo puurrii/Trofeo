@@ -218,6 +218,7 @@ img{
     margin: 0 auto;
     box-shadow: 0 0 199px 2px #212121 ;
     border-radius: 30px;
+    transition: all .2s ease-in-out;
 }
 .about div{
     margin: 0.625rem;
