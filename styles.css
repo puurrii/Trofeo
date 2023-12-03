@@ -10,9 +10,6 @@ html, body {
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
 }
-nav{
-    backdrop-filter: blur(6px);
-}
 .hero{
     height: calc(100vh - nav);
 }
