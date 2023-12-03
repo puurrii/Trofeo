@@ -9,13 +9,13 @@
 html, body {
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
-.hero{
-    height: calc(100vh - nav);
-}
+
 .video {
-    min-height: 100vh;
-    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
     object-position: center;
     object-fit: cover;
     z-index: 1;
@@ -36,10 +36,10 @@ html, body {
 
 .loader {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 1.75rem;
+    height: 1.75rem;
     position: relative;
-    border: 4px solid #fff;
+    border: 0.25rem solid #fff;
     animation: loader 2s infinite ease;
 }
 
@@ -89,14 +89,14 @@ html, body {
     100%{opacity: 1;}
 }
 .text > *{
-    word-spacing: 2px;
-    letter-spacing: 1px;
+    word-spacing: 0.125rem;
+    letter-spacing: 0.0625rem;
     white-space: pre-line;
-    margin: 10px;
+    margin: 0.625rem;
     text-transform: uppercase;
 }
 .text > p{
-    margin-bottom: 100px;
+    margin-bottom: 6.25rem;
 } 
 
 li{
@@ -104,22 +104,23 @@ li{
 }
 
 .navbar{
+    position: fixed;
     bottom: 0;
     position: absolute;
     color: #111111;
     border: 0 solid 212121;
-    font-size: 22px;
+    font-size: 1.375rem;
     height: 8vh;
-    padding-bottom: 100px;
+    padding-bottom: 6.25rem;
     width: 100vw;
     font-weight: 600;
     z-index: 3;
-    animation: fadeIn 5s;
+    animation: fadeIn;
     transition: all 3s ease-in-out;
 }
 nav{
     margin: 0 auto;
-    border-radius: 30px;
+    border-radius: 1.75rem;
     cursor: pointer;
     height: 8vh;
     width: 80vw;
@@ -128,18 +129,19 @@ nav{
     color: #111111;
     display: flex;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 2.5rem;
+    backdrop-filter: blur(0.4375rem);
 }
 nav > ul {
     justify-content: space-evenly;
     display: flex;
 }
 nav > ul > a{
-    margin:  0 20px ;
+    margin:  0 1.25rem ;
     color: #fff;
 }
 nav > *{
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
     cursor: pointer;
     color: #fff;
 }
@@ -149,7 +151,124 @@ nav > ul > a:hover{
 a{
     text-decoration: none;
 }
-@media screen and (max-width: 600px) {
+
+.products{
+    height: 100vh;
+}
+.cardcontainer{
+    width: 100vw;
+    height: 31.25rem;
+    display: flex;
+    z-index: 1;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cards{
+    height: 21.875rem;
+    margin: 1.25rem;
+    width: 17.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    color:  #a59d9d;
+    box-shadow: 0.0625rem 0.0625rem 0.25rem 0.0625rem #21212180;
+    border-radius: 1.25rem;
+    transition: all .2s ease-in-out;
+}
+.image-container {
+    width: 100%;
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+img{
+    width: 100%;
+}
+.text-container{
+    margin: 0.625rem;
+}
+.text-container>*{
+    margin: 0.625rem;
+}
+.cards:hover{
+    transform: scale(1.04);
+    color: #fff;
+}
+.htext{
+    font-size: 4.625rem;
+    text-align: center;
+}
+.products, .about{
+    height:100vh
+}
+.about{
+    color: #b8b8b8c4;
+    text-align: center;
+    background: transparent;
+    height: 100vh;
+    width: 97vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.75rem;
+    margin: 0 auto;
+    box-shadow: 0 0 199px 2px #212121 ;
+    border-radius: 30px;
+}
+.about div{
+    margin: 0.625rem;
+}
+.first{
+    text-align: start;
+}
+.first h2{
+    font-size: 3.125rem;
+}
+.first p{
+    font-size: 1.75rem;
+}
+.second{
+    text-align: center;
+}
+.second h2{
+    font-size: 3.125rem;
+}
+.second p{
+    font-size: 1.75rem;
+}
+.third{
+    text-align: end;
+}
+.third h2{
+    font-size: 3.125rem;
+}
+.third p{
+    font-size: 1.75rem;
+}
+footer{
+    text-align: center;
+    color: #ffffffc2;
+    margin: 10px;
+    height: 20vh;
+    position: fixed;
+}
+.first:hover{
+    color: #fff;
+    transform: scale(1.01);
+}
+.second:hover{
+    color: #fff;
+    transform: scale(1.01);
+}
+.third:hover{
+    color: #fff;
+    transform: scale(1.01);
+}
+@media screen and (max-width: 37.5rem) {
     .text > h1{
         font-size: 1rem;
     }
@@ -181,6 +300,37 @@ a{
         transition: all 3s ease-in-out;
     }
     .listitem > li{
-        margin: 0 30px;
+        margin: 0 1.75rem;
+    }
+    .cardcontainer{
+        height: 62rem;
+        flex-direction: column;
+    }
+    .htext{
+        font-size: 3rem;
+    }
+    .cards{
+        height: 800px;
+    }
+    .products, .about{
+        height: 130vh;
+    }
+    .about{
+        box-shadow: none;
+    }
+    .first, .second, .third{
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 0 0 144px 3px #111111;
+    }
+    .first h2, .second h2, .third h2{
+        font-size: 1.75rem;
+    }
+    .first p, .second p, .third p{
+        font-size: 1rem;
+    }
+    .listitem > a{
+        margin:  0 1.25rem ;
+        color: #fff;
     }
 }

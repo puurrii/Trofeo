@@ -1,7 +1,7 @@
 const isMobile = window.innerWidth <= 600;
 const nav = document.querySelector("nav")
 const vid = document.querySelector('.video');
-nav.style.backdropFilter = "blur(7px)";
+
 vid.currentTime = 20;
 const endTime = 120;
 vid.addEventListener('timeupdate', function() {
@@ -27,7 +27,7 @@ navbar.style.display = "none";
 textDiv.style.display = "none";
 
 vid.addEventListener("timeupdate", () => {
-if (vid.currentTime >= 18){
+if (vid.currentTime >= 20){
     navbar.style.display = "flex"
     textDiv.style.display = "flex"
 }}
@@ -52,4 +52,8 @@ toggle.addEventListener("click", () => {
 
 if ((localStorage.getItem(audioStatus)) === "on") {
     audio.play();
+}
+var homePageUrl = "./index.html";
+if (performance.navigation.type === 1) {
+    window.location.href = homePageUrl;
 }
