@@ -3,7 +3,12 @@ const isMobile = window.innerWidth <= 600;
 const vid = document.querySelector('.video');
 
 vid.currentTime = 20;
-
+const endTime = 120;
+vid.addEventListener('timeupdate', function() {
+    if (vid.currentTime >= endTime) {
+        vid.currentTime = 20;
+    }
+});
 
 window.addEventListener("load", () => {
 
