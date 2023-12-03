@@ -1,10 +1,13 @@
 const isMobile = window.innerWidth <= 600;
-
+const nav = document.querySelector("nav")
 const vid = document.querySelector('.video');
 
 vid.currentTime = 20;
 const endTime = 120;
 vid.addEventListener('timeupdate', function() {
+    if (vid.currentTime >= 20) {
+        nav.style.backdropFilter = "blur(5px)";
+    }
     if (vid.currentTime >= endTime) {
         vid.currentTime = 20;
     }
