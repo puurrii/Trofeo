@@ -5,8 +5,8 @@ const vid = document.querySelector('.video');
 vid.currentTime = 20;
 const endTime = 120;
 vid.addEventListener('timeupdate', function() {
-    if (vid.currentTime >= 20) {
-        nav.style.backdropFilter = "blur(6px)";
+    if (vid.currentTime) {
+        nav.style.backdropFilter = "blur(7px)";
     }
     if (vid.currentTime >= endTime) {
         vid.currentTime = 20;
