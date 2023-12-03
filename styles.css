@@ -11,7 +11,7 @@ html, body {
     overflow-x: hidden;
 }
 nav{
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(6px);
 }
 .hero{
     height: calc(100vh - nav);
